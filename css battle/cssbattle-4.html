@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="basic.css" />
+    <style>
+      .container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: #ffeead;
+        /* padding: 10px; */
+        height: 100px;
+        width: 100px;
+        margin: 0 auto;
+      }
+
+      html,
+      body {
+        background-color: #62306d;
+        margin: 10px;
+      }
+
+      .container > div:nth-child(1n) {
+        background-color: #96ceb4;
+      }
+
+      .container > div:nth-child(3n) {
+        background-color: #88d8b0;
+      }
+
+      .container > div:nth-child(2n) {
+        background-color: #ff6f69;
+      }
+
+      .container > div:nth-child(4n) {
+        background-color: #ffcc5c;
+      }
+
+      .container {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        /* border: 1px solid black;
+        gap: 10px; */
+        grid-template-areas:
+          ". top ."
+          "bottom-right . bottom-left";
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px;
+        place-content: center;
+      }
+      .bottom-right {
+        grid-area: bottom-right;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+      .bottom-left {
+        grid-area: bottom-left;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+      .top {
+        grid-area: top;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+      }
+      .container > div {
+        background-color: #f7ec7d !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bottom-right"></div>
+      <div class="top"></div>
+      <div class="bottom-left"></div>
+    </div>
+  </body>
+</html>

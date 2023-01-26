@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child first"></div>
+      <div class="child second"></div>
+      <div class="child third"></div>
+      <div class="child fourth"></div>
+    </div>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #e3516e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        animation: bg 0.2s linear infinite;
+      }
+      .container {
+        /* background-color: lime; */
+        height: 200px;
+        width: 200px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        animation: spin 0.05s linear infinite;
+        /* border: 10px solid black; */
+      }
+      @keyframes bg {
+        /* keep changing the background color to this color and lime */
+        0% {
+          background-color: #e3516e;
+        }
+        50% {
+          background-color: #51b5a9;
+        }
+
+        100% {
+          background-color: #e3516e;
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(90deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+
+        75% {
+          transform: rotate(270deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .child {
+        background-color: black;
+        /* margin: 10px; */
+      }
+      .first {
+        background-color: #51b5a9;
+        border-top-left-radius: 100%;
+      }
+      .second {
+        background-color: #fade8b;
+        border-top-right-radius: 100%;
+      }
+      .third {
+        background-color: #f7f3d7;
+        border-bottom-left-radius: 100%;
+      }
+      .fourth {
+        border-bottom-right-radius: 100%;
+        background-color: #e3516e;
+      }
+    </style>
+  </body>
+</html>
+
+<!-- OBJECTIVE -->
+<!-- Write HTML/CSS in this editor and replicate the given target image in the least code possible. What you write here, renders as it is -->
+
+<!-- SCORING -->
+<!-- The score is calculated based on the number of characters you use (this comment included :P) and how close you replicate the image. Read the FAQS (https://cssbattle.dev/faqs) for more info. -->
+
+<!-- IMPORTANT: remove the comments before submitting -->
