@@ -1,9 +1,11 @@
 import { NextPage } from "next";
 
+import TipTap from "../components/tiptap";
+
 const Tiptap: NextPage = () => {
   return (
-    <div className="flex h-screen justify-center place-items-center">
-      <h1>Tiptap</h1>
+    <div className="">
+      <TipTap />
     </div>
   );
 };
