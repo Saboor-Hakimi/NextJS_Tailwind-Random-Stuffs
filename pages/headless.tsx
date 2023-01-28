@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       href: "#",
       imageSrc: getImageURL(),
       price: "$" + faker.commerce.price(),
-      color: faker.commerce.color(),
+      color: faker.color.human(),
     };
   }
 

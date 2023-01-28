@@ -12,5 +12,6 @@ module.exports = {
     require("daisyui"),
     require("flowbite"),
     require("@tailwindcss/aspect-ratio"),
+    require("@headlessui/react"),
   ],
 };
