@@ -8,5 +8,9 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), require("flowbite")],
+  plugins: [
+    require("daisyui"),
+    require("flowbite"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
