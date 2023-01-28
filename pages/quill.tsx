@@ -6,6 +6,8 @@ import "react-quill/dist/quill.snow.css";
 import "react-quill/dist/quill.bubble.css";
 import { useState } from "react";
 
+import "react-quill/dist/quill.core.css";
+
 const Home: NextPage = () => {
   const [value, setValue] = useState("");
 
@@ -33,6 +35,10 @@ const Home: NextPage = () => {
         onChange={setValue}
         placeholder="Content goes here..."
       />
+      <div
+        className="h-4 view ql-editor"
+        dangerouslySetInnerHTML={{ __html: value }}
+      ></div>
     </>
   );
 };
