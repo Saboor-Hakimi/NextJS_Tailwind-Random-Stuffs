@@ -3,7 +3,8 @@ import type { AppProps } from "next/app";
 
 import "./../style.scss";
 
-import { store } from "../store";
+import store from "../store/index";
+
 import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }: AppProps) {
