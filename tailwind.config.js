@@ -13,5 +13,6 @@ module.exports = {
     require("flowbite"),
     require("@tailwindcss/aspect-ratio"),
     require("@headlessui/react"),
+    require("@tailwindcss/line-clamp"),
   ],
 };
