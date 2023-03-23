@@ -1,5 +1,7 @@
 import { NextPage } from "next";
 
+import Search from "../../components/Search/search";
+
 const Home: NextPage = () => {
   return (
     <>
@@ -107,6 +109,9 @@ const Home: NextPage = () => {
               About Us
             </a>
           </div>
+        </div>
+        <div className="absolute bottom-[40vh]  flex items-center w-screen text-center justify-center text-white text-lg">
+          <Search />
         </div>
       </div>
     </>
