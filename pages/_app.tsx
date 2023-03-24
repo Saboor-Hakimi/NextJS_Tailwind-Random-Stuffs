@@ -7,11 +7,20 @@ import store from "../store/index";
 
 import { Provider } from "react-redux";
 
+import { MedusaProvider } from "medusa-react";
+
+import { QueryClient } from "@tanstack/react-query";
+const queryClient = new QueryClient();
+const baseURL = process.env.NEXT_PUBLIC_MEDUSA_BASE_URL;
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Provider store={store}>
+    <MedusaProvider
+      queryClientProviderProps={{ client: queryClient }}
+      baseUrl={baseURL as string}
+    >
       <Component {...pageProps} />
-    </Provider>
+    </MedusaProvider>
   );
 }
 
