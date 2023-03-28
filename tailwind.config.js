@@ -10,6 +10,10 @@ module.exports = {
       // fontFamily: {
       //   // sans: ["Poppins", "sans-serif"],
       // },
+
+      colors: {
+        aseel: "#11608f",
+      },
     },
   },
   plugins: [

@@ -5,7 +5,7 @@ function HowToSell() {
         <div className="flex justify-center items-center text-3xl font-bold">
           How to sell through Aseel?
         </div>
-        <div className="grid grid-cols-3 grid-rows-2 px-52 py-4 gap-8">
+        <div className="grid grid-cols-3 grid-rows-2 py-4 gap-8">
           {/* this div is row 1 and row two of first column */}
           <div className="row-start-1 row-end-3">
             <img
