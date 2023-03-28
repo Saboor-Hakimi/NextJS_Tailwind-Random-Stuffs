@@ -7,6 +7,8 @@ import store from "../store/index";
 
 import { Provider } from "react-redux";
 
+import "typeface-poppins";
+
 import { MedusaProvider } from "medusa-react";
 
 import { QueryClient } from "@tanstack/react-query";
