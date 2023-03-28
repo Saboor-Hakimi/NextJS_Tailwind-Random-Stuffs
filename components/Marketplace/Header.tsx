@@ -8,7 +8,7 @@ function Header() {
             className="h-10"
             alt=""
           />
-          <ol className="flex flex-row gap-4 text-sm font-sans">
+          <ol className="flex flex-row gap-5 text-sm font-sans">
             <li className="hover:cursor-pointer">Why sell with Aseel?</li>
             <li className="hover:cursor-pointer">How to sell through Aseel?</li>
             <li className="hover:cursor-pointer">Start selling</li>
