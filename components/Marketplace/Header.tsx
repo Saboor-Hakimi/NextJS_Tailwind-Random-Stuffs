@@ -15,7 +15,7 @@ function Header() {
           </ol>
 
           <div className="ml-auto">
-            <div className="btn btn-primary bg-[#11608f] hover:bg-[#163382] btn-sm">
+            <div className="btn btn-primary bg-aseel hover:bg-[#163382] btn-sm">
               Sign In
             </div>
           </div>

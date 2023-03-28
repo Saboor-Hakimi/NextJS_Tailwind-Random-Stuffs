@@ -1,7 +1,7 @@
 function HowToSell() {
   return (
     <>
-      <div className="pt-8 text-[#11608f] ">
+      <div className="pt-8 text-aseel ">
         <div className="flex justify-center items-center text-3xl font-bold">
           How to sell through Aseel?
         </div>

@@ -24,7 +24,7 @@ function Header() {
               />
             </div>
             <div>
-              <div className="btn btn-primary bg-[#11608f] hover:bg-[#163382] btn-md my-12 text-lg">
+              <div className="btn btn-primary bg-aseel hover:bg-[#163382] btn-md my-12 text-lg">
                 Start Selling
               </div>
             </div>
