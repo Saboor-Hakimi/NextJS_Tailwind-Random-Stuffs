@@ -1,8 +1,19 @@
 import { NextPage } from "next";
 
+import { useForm } from "react-hook-form";
+
 import Header from "../../components/Marketplace/Header";
 
+
+
 const Home: NextPage = () => {
+
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+  function onSubmit(data) {
+    console.log(data);
+  }
+
   return (
     <>
       <Header />
@@ -19,14 +30,14 @@ const Home: NextPage = () => {
           <div className="flex flex-row gap-3 my-2 justify-around">
             <input
               type="text"
-              name=""
               id=""
               placeholder="First Name"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
+              {...register("first")}
             />
             <input
               type="text"
-              name=""
+              {...register("last")}
               id=""
               placeholder="Last Name"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -35,7 +46,7 @@ const Home: NextPage = () => {
           <div className="flex flex-row gap-3 my-2 justify-around">
             <input
               type="email"
-              name=""
+              {...register("email")}
               id=""
               placeholder="Email Address"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -43,14 +54,14 @@ const Home: NextPage = () => {
             <input
               type="text"
               pattern="[0-9]*"
-              name=""
+              {...register("phone")}
               id=""
               placeholder="Phone Number"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
             />
           </div>
           <div className="flex flex-row gap-3 my-2 justify-around">
-            <select className="border-gray border-2 rounded-lg px-4 py-2 w-full">
+            <select className="border-gray border-2 rounded-lg px-4 py-2 w-full" name="gender">
               <optgroup label="Select Gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -61,7 +72,7 @@ const Home: NextPage = () => {
 
           {/* never expand this part, ever again */}
           <div className="flex flex-row gap-3 my-2 justify-around">
-            <select className="border-gray border-2 rounded-lg px-4 py-2 w-full">
+            <select className="border-gray border-2 rounded-lg px-4 py-2 w-full" name="country">
               <optgroup label="Select Country">
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Åland Islands</option>
@@ -319,7 +330,7 @@ const Home: NextPage = () => {
           <div className="flex flex-row gap-3 my-2 justify-around">
             <input
               type="text"
-              name=""
+              name="city"
               id=""
               placeholder="City"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -329,7 +340,7 @@ const Home: NextPage = () => {
           <div className="flex flex-row gap-3 my-2 justify-around">
             <input
               type="text"
-              name=""
+              name="shop_name"
               id=""
               placeholder="Shop Name"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -338,7 +349,7 @@ const Home: NextPage = () => {
           <div className="flex flex-row gap-3 my-2 justify-around">
             <input
               type="url"
-              name=""
+              name="url"
               id=""
               placeholder="Shop Url"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -346,7 +357,7 @@ const Home: NextPage = () => {
           </div>
           {/* don't open this either */}
           <div className="flex flex-row gap-3 my-2 justify-around">
-            <select className="border-gray border-2 rounded-lg px-4 py-2 w-full">
+            <select className="border-gray border-2 rounded-lg px-4 py-2 w-full" name="how">
               <optgroup label="How did you found us?">
                 <option value="19653"> Aseel&#039;s Social Media</option>
                 <option value="19654">Aseel&#039;s Newsletters</option>
@@ -368,7 +379,7 @@ const Home: NextPage = () => {
           <div className="flex flex-row gap-3 my-2 justify-around">
             <input
               type="password"
-              name=""
+              {...register("password")}
               id=""
               placeholder="Password"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -376,7 +387,7 @@ const Home: NextPage = () => {
             <input
               type="password"
               pattern=""
-              name=""
+              {...register("confirm_password")}
               id=""
               placeholder="Confirm Password"
               className="border-gray border-2 rounded-lg px-4 py-2 w-full"
@@ -384,14 +395,14 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex flex-row gap-3 my-2 justify-left mx-1">
-            <input type="checkbox" name="" id="" />
+            <input type="checkbox" name="news_letter" id="" />
             <label htmlFor="" className="text-sm font-bold">
               Sign Up for Newsletter
             </label>
           </div>
 
           <div className="flex flex-row gap-3 my-2 justify-center mx-4">
-            <div className="btn btn-primary bg-aseel w-full hover:bg-[#163382]">
+            <div className="btn btn-primary bg-aseel w-full hover:bg-[#163382]" onClick={onSubmit}>
               Get Started
             </div>
           </div>
